@@ -1,0 +1,29 @@
+{
+  "name": "google_sentiment_analysis",
+  "version": "1.0.0",
+  "description": "Node project to simulate sentiment analysis using google sentiment analysis",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "set GOOGLE_APPLICATION_CREDENTIALS=google.json&& node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imsontosh/google_sentiment_analysis.git"
+  },
+  "keywords": [
+    "Google",
+    "Analyzing",
+    "Entity",
+    "Sentiment"
+  ],
+  "author": "imsontosh@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imsontosh/google_sentiment_analysis/issues"
+  },
+  "homepage": "https://github.com/imsontosh/google_sentiment_analysis#readme",
+  "dependencies": {
+    "@google-cloud/language": "^1.0.0"
+  }
+}
