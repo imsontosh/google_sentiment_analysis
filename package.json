@@ -4,7 +4,7 @@
   "description": "Node project to simulate sentiment analysis using google sentiment analysis",
   "main": "index.js",
   "scripts": {
-    "dev" : "set GOOGLE_APPLICATION_CREDENTIALS=google.json&& node index.js",
+    "dev": "set GOOGLE_APPLICATION_CREDENTIALS=google.json&& node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/imsontosh/google_sentiment_analysis#readme",
   "dependencies": {
-    "@google-cloud/language": "^1.0.0"
+    "@google-cloud/language": "^1.0.0",
+    "twitter": "^1.7.1"
   }
 }
