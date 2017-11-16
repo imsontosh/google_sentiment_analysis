@@ -25,6 +25,7 @@
   "homepage": "https://github.com/imsontosh/google_sentiment_analysis#readme",
   "dependencies": {
     "@google-cloud/language": "^1.0.0",
+    "firebase-admin": "^5.5.0",
     "twitter": "^1.7.1"
   }
 }
