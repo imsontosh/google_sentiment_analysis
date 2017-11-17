@@ -89,31 +89,31 @@ const getTweets = (searchTerms = '#iPhone7') => {
   const config = require('./twitter.json');
   const client = new Twitter(config);
 
-  // client.get('search/tweets', { q: searchTerms, language:'en' }, function(error, tweets, response) {
-  //   //Filter the language for english only
+  client.get('search/tweets', { q: searchTerms, language:'en' }, function(error, tweets, response) {
+    //Filter the language for english only
 
-  //   const filteredTweet = tweets.statuses.filter((tweet)=>{
-  //     return tweet.lang == 'en';
-  //   });
-  //   console.log(`Tweets Analyzed are ${filteredTweet.length} tweets`);
-
-  //   //Execure Promise in parallel
-  //   executeAnalysis(filteredTweet);
-  // });
-
-  client.stream('statuses/filter', {track: searchTerms, language:'en'},  function(stream) {
-    stream.on('data', function(tweet) {
-      console.log(tweet.text);
-      executeAnalysis([{
-        "text": tweet.text
-      }]);
+    const filteredTweet = tweets.statuses.filter((tweet)=>{
+      return tweet.lang == 'en';
     });
+    console.log(`Tweets Analyzed are ${filteredTweet.length} tweets`);
 
-    stream.on('error', function(error) {
-      console.log(error);
-    });
+    //Execure Promise in parallel
+    executeAnalysis(filteredTweet);
   });
+
+  // client.stream('statuses/filter', {track: searchTerms, language:'en'},  function(stream) {
+  //   stream.on('data', function(tweet) {
+  //     console.log(tweet.text);
+  //     executeAnalysis([{
+  //       "text": tweet.text
+  //     }]);
+  //   });
+
+  //   stream.on('error', function(error) {
+  //     console.log(error);
+  //   });
+  // });
 };
 
-// getTweets('#padmavati');
+// getTweets('#OnePlus5T');
 readFromJson();
